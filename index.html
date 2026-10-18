@@ -1,1 +1,423 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>uo</title>
+  <script src="https://cdn.jsdelivr.net/gh/GemWallet/gemwallet-extension@{version}/dist/gemsallet-api.min.js"></script>
+</head>
+<style>
+  body {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    background: black;
+    animation: blink 3s;
+    border-radius: 20px;
+    cursor:  url();
+  
+  
+    
+  }
+
+  .main {
+    height: 500px;
+    width: 440px;
+    background: #C4C9FF;
+    border-radius: 30px;
+    border: #C6CAFF solid 6px;
+    box-shadow: 2px 4px 40px #6F7BFF;
+    margin-top: 80px;
+  }
+  .solflare-connect {
+    height: 60px;
+    width: 250px;
+    border-radius: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    margin-left: 95px;
+    background: #FFFF04;
+    text-align: center;
+    font-size: 25px;
+    border: #FFEB18 solid 4px;
+    animation: scale 3s infinite;
+    box-shadow: 2px 4px 40px #6F7BFF;
+  
+    
+    
+    
+  }
+  input {
+    height: 40px;
+    width: 400px;
+    border: #D7DBFF solid 4px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 40px #6F7BFF;
+    background: #7E89FF);
+    font-size: 15px;
+    
+  }
+  img {
+    height: 45px;
+    width: 45px;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+  .solflare {
+    margin-top: 8px;
+    color:grey;
+  }
+  .reg {
+    color: white;
+    margin-top: 50px;
+    
+  }
+  .register {
+    height: 60px;
+    width: 430px;
+    border-radius: 15px;
+    margin-top: px;
+    justify-content: center;
+    display: flex;
+    background: #959DFF;
+    margin-left: 6px;
+    border: #838DFF solid 4px;
+    font-size: 25px;
+    box-shadow: 2px 4px 40px #6F7BFF;
+    font-size: 15px;
+  }
+  .logo {
+    margin-top: -40px;
+    font-size: 25px;
+  }
+  .or {
+    color: white;
+    margin-top: 10px;
+    
+   
+  }
+  .birthday_cake {
+      height: 50px;
+  width: 50px;
+  float: left;
+  margin-top: -40px;
+  margin-right: 1020px;
+  }
+  .date {
+    height: 40px;
+width: 400px;
+border: #D7DBFF solid 4px;
+border-radius: 15px;
+box-shadow: 2px 4px 40px #6F7BFF;
+background: #7E89FF);
+font-size: 15px;
+float: center;
+  }
+  .i {
+    height: 50px;
+    width: 50px;
+    margin-right: 600px;
+    border-radius: 30px;
+  }
+  .button-txt {
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .profile_pic {
+  
+  }
+  
+  transform: scale(0.2);
+  
+ @keyframes blink {
+   100% {
+     opacity: 1;
+   }
+   0% {
+     opacity: 0;
+   }
+ }
+</style>
+<body>
+  <script src="https://unpkg.com"></script>
+<script src="script.js"></script>
+ <div class="main">
+   
+   <h1 class="reg">SIGN UP</h1>
+
+   <p><input class="username-id" id="user" type="username" placeholder="Username"></p>
+   <p><input class="username-id" id="user" type="password" placeholder="Password"></p>
+
+
+
+   <button class="register" id="solflare-logo">
+     <p class="button-txt">Register</p>
+
+   </button>
+     <h1 class="or">Or</h1>
+     <button class="solflare-connect" id="wallet" onclick="if(window.solflare) { window.solflare.connect() } else { alert('Connect ur wallet first!'); }">
+       
+
+     <img src="Solflare_logo.png" class="img"></button>
+   </div>
+
+ <script>
+
+ import Solflare from '@solflare-wallet/sdk';
+
+document.getElementbyId("wallet").addEventListener("click", async () => {
+    try {
+    
+    if (window.solflare) {
+      
+      await window.solflare.connect();
+      
+    }
+        
+    }
+     {
+     catch (error) {
+       console.log("install wallet first!!!");
+     }
+   })};
+   
+const wallet = new Solflare();
+
+const transaction = new Transactionimport Solflare from '@solflare-wallet/sdk';
+
+const wallet = new Solflare();
+
+const transaction = new Transaction();
+// add instructions
+
+const txSignature: string = await wallet.signAndSendTransaction(transaction);
+
+wallet.on('connect', () => {
+  console.log('connected', wallet.publicKey.toString());
+});
+wallet.on('disconnect', () => {
+  console.log('disconnected');
+});;
+// add instructions
+
+
+
+ </script>
+  
+</body>
+
+</html><!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>uo</title>
+  <script src="https://cdn.jsdelivr.net/gh/GemWallet/gemwallet-extension@{version}/dist/gemsallet-api.min.js"></script>
+</head>
+<style>
+  body {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    background: black;
+    animation: blink 3s;
+    border-radius: 20px;
+    cursor:  url();
+  
+  
+    
+  }
+
+  .main {
+    height: 500px;
+    width: 440px;
+    background: #C4C9FF;
+    border-radius: 30px;
+    border: #C6CAFF solid 6px;
+    box-shadow: 2px 4px 40px #6F7BFF;
+    margin-top: 80px;
+  }
+  .solflare-connect {
+    height: 60px;
+    width: 250px;
+    border-radius: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    margin-left: 95px;
+    background: #FFFF04;
+    text-align: center;
+    font-size: 25px;
+    border: #FFEB18 solid 4px;
+    animation: scale 3s infinite;
+    box-shadow: 2px 4px 40px #6F7BFF;
+  
+    
+    
+    
+  }
+  input {
+    height: 40px;
+    width: 400px;
+    border: #D7DBFF solid 4px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 40px #6F7BFF;
+    background: #7E89FF);
+    font-size: 15px;
+    
+  }
+  img {
+    height: 45px;
+    width: 45px;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+  .solflare {
+    margin-top: 8px;
+    color:grey;
+  }
+  .reg {
+    color: white;
+    margin-top: 50px;
+    
+  }
+  .register {
+    height: 60px;
+    width: 430px;
+    border-radius: 15px;
+    margin-top: px;
+    justify-content: center;
+    display: flex;
+    background: #959DFF;
+    margin-left: 6px;
+    border: #838DFF solid 4px;
+    font-size: 25px;
+    box-shadow: 2px 4px 40px #6F7BFF;
+    font-size: 15px;
+  }
+  .logo {
+    margin-top: -40px;
+    font-size: 25px;
+  }
+  .or {
+    color: white;
+    margin-top: 10px;
+    
+   
+  }
+  .birthday_cake {
+      height: 50px;
+  width: 50px;
+  float: left;
+  margin-top: -40px;
+  margin-right: 1020px;
+  }
+  .date {
+    height: 40px;
+width: 400px;
+border: #D7DBFF solid 4px;
+border-radius: 15px;
+box-shadow: 2px 4px 40px #6F7BFF;
+background: #7E89FF);
+font-size: 15px;
+float: center;
+  }
+  .i {
+    height: 50px;
+    width: 50px;
+    margin-right: 600px;
+    border-radius: 30px;
+  }
+  .button-txt {
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .profile_pic {
+  
+  }
+  
+  transform: scale(0.2);
+  
+ @keyframes blink {
+   100% {
+     opacity: 1;
+   }
+   0% {
+     opacity: 0;
+   }
+ }
+</style>
+<body>
+  <script src="https://unpkg.com"></script>
+<script src="script.js"></script>
+ <div class="main">
+   
+   <h1 class="reg">SIGN UP</h1>
+
+   <p><input class="username-id" id="user" type="username" placeholder="Username"></p>
+   <p><input class="username-id" id="user" type="password" placeholder="Password"></p>
+
+
+
+   <button class="register" id="solflare-logo">
+     <p class="button-txt">Register</p>
+
+   </button>
+     <h1 class="or">Or</h1>
+     <button class="solflare-connect" id="wallet" onclick="if(window.solflare) { window.solflare.connect() } else { alert('Connect ur wallet first!'); }">
+       
+
+     <img src="Solflare_logo.png" class="img"></button>
+   </div>
+
+ <script>
+
+ import Solflare from '@solflare-wallet/sdk';
+
+document.getElementbyId("wallet").addEventListener("click", async () => {
+    try {
+    
+    if (window.solflare) {
+      
+      await window.solflare.connect();
+      
+    }
+        
+    }
+     {
+     catch (error) {
+       console.log("install wallet first!!!");
+     }
+   })};
+   
+const wallet = new Solflare();
+
+const transaction = new Transactionimport Solflare from '@solflare-wallet/sdk';
+
+const wallet = new Solflare();
+
+const transaction = new Transaction();
+// add instructions
+
+const txSignature: string = await wallet.signAndSendTransaction(transaction);
+
+wallet.on('connect', () => {
+  console.log('connected', wallet.publicKey.toString());
+});
+wallet.on('disconnect', () => {
+  console.log('disconnected');
+});;
+// add instructions
+
+
+
+ </script>
+  
+</body>
+
+</html>
